@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>LINE Card</title>
+    <link
+      rel="stylesheet"
+      href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <div class="focus"></div>
+        <div class="card-bg"></div>
+        <div class="top">LINE</div>
+        <div class="card-number">
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+          <span>#<br /></span>
+        </div>
+        <div class="card-name">LINE Member</div>
+        <div class="card-date">
+          <span class="good-through">Good Thru</span>01/23
+        </div>
+      </div>
+      <section>
+        <h2>Add LINE Card</h2>
+        <form class="form">
+          <div class="wrapper">
+            <div class="cardNumber">
+              <label for="cardNumber">Card Number</label>
+              <input
+                type="text"
+                id="cardNumber" />
+            </div>
+            <div class="cardDate">
+              <label for="expiration-date">Expiration Date</label>
+              <div>
+                <select
+                  name="expiration-month"
+                  id="expiration-month">
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+
+                <select
+                  name="expiration-year"
+                  id="expiration-year">
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="cardName">
+            <label for="cardName">Cardholder Name</label>
+            <input
+              type="text"
+              id="cardName" />
+          </div>
+        </form>
+      </section>
+    </div>
+    <script
+      type="module"
+      src="/main.js"></script>
+    <script src="/tilt.js"></script>
+  </body>
+</html>
