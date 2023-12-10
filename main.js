@@ -8,7 +8,7 @@ const updateCardNumber = () => {
   const inputCardNumber = query('#cardNumber');
   const cardNumber = query('.card-number');
   const spanCardNumber = queryAll('.card-number > span');
-  const focus = query('.focus');
+  const focus = query('.card-focus');
 
   inputCardNumber.addEventListener('focusin', () => {
     focus.style.opacity = '1';
@@ -57,7 +57,7 @@ const updateCardName = () => {
   const BASE_NAME = 'LINE Member';
   const inputName = query('#cardName');
   const cardName = query('.card-name');
-  const focus = query('.focus');
+  const focus = query('.card-focus');
 
   inputName.addEventListener('focusin', () => {
     focus.style.opacity = '1';
@@ -81,12 +81,12 @@ const updateCardDate = () => {
   const cardDate = query('.card-date');
   const selectExpirationMonth = query('#expiration-month');
   const selectExpirationYear = query('#expiration-year');
-  const focus = query('.focus');
+  const focus = query('.card-focus');
   let date = '';
   let month = '01';
   let year = '23';
 
-  const BASE_TEXT = '<span class="good-through">Good Thru</span>';
+  const BASE_TEXT = '<span class="card-expires">Good Thru</span>';
 
   const commonStyles = {
     opacity: '1',

@@ -1,13 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-* {
-  margin: 0;
-  padding: 0;
 }
 
 #app {
@@ -20,26 +21,6 @@
   border: 1px solid blue;
 }
 
-.top {
-  color: #44b54e;
-  font-weight: 800;
-  text-align: right;
-  margin: 1em 1em 0 0;
-}
-
-.focus {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-
-  border: 1px solid #eee;
-  border-radius: 10px;
-
-  transition: all 0.5s ease;
-}
-
 .card {
   transform-style: preserve-3d;
   position: relative;
@@ -50,10 +31,18 @@
   -webkit-user-select: none;
 }
 
-.card-number,
-.card-date,
-.card-name {
-  transform: translateZ(30px);
+.card-focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+
+  border: 1px solid #eee;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+
+  transition: all 0.5s ease;
 }
 
 .card-bg {
@@ -72,14 +61,26 @@
   box-shadow: 0px 0px 5px 0 rgb(90, 90, 90);
 }
 
+.card-top {
+  color: #44b54e;
+  font-weight: 800;
+  text-align: right;
+  margin: 1em 1em 0 0;
+}
+.card-number,
+.card-date,
+.card-name {
+  transform: translateZ(30px);
+}
+
 .card-number {
   position: absolute;
   display: flex;
   align-items: center;
   overflow: hidden;
-  top: 50%;
+  top: 55%;
   left: 10%;
-  height: 2em;
+  height: 1em;
 
   font-size: 1.25rem;
   color: #ffffff;
@@ -88,7 +89,7 @@
 
 .card-number span {
   display: flex;
-  line-height: 1.75;
+  line-height: 1.5;
   flex-direction: column;
   transition: transform 0.3s ease;
 }
@@ -98,7 +99,17 @@
 }
 
 .card-number span.typed {
-  transform: translateY(-17px);
+  transform: translateY(-15px);
+}
+
+.card-date {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: rgb(42, 42, 42) 1px 1px 2px;
 }
 
 .card-name {
@@ -112,24 +123,14 @@
   text-shadow: rgb(42, 42, 42) 1px 1px 2px;
 }
 
-.good-through {
+.card-expires {
   display: inline-block;
   text-transform: uppercase;
   font-size: 0.5rem;
   width: 4em;
 }
 
-.card-date {
-  position: absolute;
-  bottom: 20%;
-  left: 10%;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  color: #ffffff;
-  text-shadow: rgb(42, 42, 42) 1px 1px 2px;
-}
-
-h2 {
+.form-title {
   color: #44b54e;
   margin-bottom: 0.5em;
 }
@@ -138,21 +139,18 @@ h2 {
   width: 320px;
 }
 
-.form div {
-  margin-bottom: 0.5em;
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
 
-.form .cardNumber,
-.form .cardName,
-.form .cardDate {
+.form-cardNumber,
+.form-cardName,
+.form-cardDate {
   display: flex;
   flex-direction: column;
   font-size: 0.875rem;
-}
-
-.form .wrapper {
-  display: flex;
-  justify-content: space-between;
 }
 
 .form input,

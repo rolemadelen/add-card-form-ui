@@ -17,9 +17,9 @@
   <body>
     <div id="app">
       <div class="card">
-        <div class="focus"></div>
+        <div class="card-focus"></div>
         <div class="card-bg"></div>
-        <div class="top">LINE</div>
+        <div class="card-top">LINE</div>
         <div class="card-number">
           <span>#<br /></span>
           <span>#<br /></span>
@@ -43,20 +43,21 @@
         </div>
         <div class="card-name">LINE Member</div>
         <div class="card-date">
-          <span class="good-through">Good Thru</span>01/23
+          <span class="card-expires">Good Thru</span>01/23
         </div>
       </div>
+
       <section>
-        <h2>Add LINE Card</h2>
+        <h2 class="form-title">Add LINE Card</h2>
         <form class="form">
-          <div class="wrapper">
-            <div class="cardNumber">
+          <div class="form-wrapper">
+            <div class="form-cardNumber">
               <label for="cardNumber">Card Number</label>
               <input
                 type="text"
                 id="cardNumber" />
             </div>
-            <div class="cardDate">
+            <div class="form-cardDate">
               <label for="expiration-date">Expiration Date</label>
               <div>
                 <select
@@ -90,7 +91,7 @@
               </div>
             </div>
           </div>
-          <div class="cardName">
+          <div class="form-cardName">
             <label for="cardName">Cardholder Name</label>
             <input
               type="text"
