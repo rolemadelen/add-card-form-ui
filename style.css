@@ -1,0 +1,168 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  height: 100vh;
+  border: 1px solid blue;
+}
+
+.top {
+  color: #44b54e;
+  font-weight: 800;
+  text-align: right;
+  margin: 1em 1em 0 0;
+}
+
+.focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  transition: all 0.5s ease;
+}
+
+.card {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 350px;
+  height: 220px;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card-number,
+.card-date,
+.card-name {
+  transform: translateZ(30px);
+}
+
+.card-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/bear.webp);
+  background-position: 0 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9);
+  z-index: -1;
+  border-radius: 10px;
+  border: 1px solid rgb(153 153 153);
+  box-shadow: 0px 0px 5px 0 rgb(90, 90, 90);
+}
+
+.card-number {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  top: 50%;
+  left: 10%;
+  height: 2em;
+
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-shadow: rgb(42, 42, 42) 1px 1px 2px;
+}
+
+.card-number span {
+  display: flex;
+  line-height: 1.75;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card-number span:nth-of-type(4n) {
+  margin-right: 0.5em;
+}
+
+.card-number span.typed {
+  transform: translateY(-17px);
+}
+
+.card-name {
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+
+  font-size: 1rem;
+  color: #ffffff;
+  text-shadow: rgb(42, 42, 42) 1px 1px 2px;
+}
+
+.good-through {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  width: 4em;
+}
+
+.card-date {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: rgb(42, 42, 42) 1px 1px 2px;
+}
+
+h2 {
+  color: #44b54e;
+  margin-bottom: 0.5em;
+}
+
+.form {
+  width: 320px;
+}
+
+.form div {
+  margin-bottom: 0.5em;
+}
+
+.form .cardNumber,
+.form .cardName,
+.form .cardDate {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+
+.form .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form input,
+.form select {
+  border-radius: 5px;
+  border: 1px solid #777;
+  height: 2em;
+  padding: 2px 8px;
+}
+
+.form select {
+  height: 2.5em;
+}
