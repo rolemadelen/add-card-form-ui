@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-green: rgb(56, 167, 56);
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.5;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  height: 100vh;
+}
+
+.card-focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 3px white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  position: relative;
+  width: 350px;
+  height: 220px;
+  border-radius: 10px;
+
+  background: url(./assets/bear.webp);
+  background-size: cover;
+  background-position: 0 55%;
+
+  color: #eee;
+  box-shadow: 0 0 5px 0 rgb(58, 58, 58);
+}
+
+.card-top {
+  text-align: right;
+  padding: 1em 1em 0;
+  color: var(--color-green);
+  font-weight: 800;
+
+  height: 6em;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5em;
+  text-shadow: rgb(36, 36, 36) 1px 1px 2px;
+  transform: translateZ(20px);
+}
+
+.card-number {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  height: 1.5em;
+  overflow: hidden;
+  width: 12em;
+
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+.card-number span {
+  will-change: transform;
+  transition: transform 0.2s ease;
+}
+
+.card-number span:nth-child(4n) {
+  margin-right: 0.5em;
+}
+
+.typed {
+  transform: translateY(-15px);
+}
+
+.card-date {
+  font-size: 0.8rem;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+.card-date span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  width: 4em;
+}
+
+.card-name {
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.form {
+  width: 320px;
+}
+
+.form label,
+.form .label {
+  font-size: 0.8rem;
+}
+
+.form-title {
+  color: var(--color-green);
+  margin-bottom: 0.5em;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.form-cardNumber,
+.form-cardDate,
+.form-cardName {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form select {
+  height: 2em;
+  border-radius: 5px;
+  border: 1px solid #777;
+  padding: 2px 8px;
+}
+
+.form select {
+  height: 2.3em;
+}
